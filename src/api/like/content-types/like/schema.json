@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "likes",
+  "info": {
+    "singularName": "like",
+    "pluralName": "likes",
+    "displayName": "Like",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "tweet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tweet.tweet",
+      "inversedBy": "likes"
+    },
+    "created_date": {
+      "type": "datetime"
+    }
+  }
+}
