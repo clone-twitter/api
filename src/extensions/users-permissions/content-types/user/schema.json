@@ -70,22 +70,26 @@
       "type": "string",
       "required": true
     },
-    "created_date": {
-      "type": "date",
-      "required": true
-    },
     "biography": {
       "type": "text"
     },
     "website": {
       "type": "string"
     },
-    "photo_url": {
-      "type": "string",
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
       "required": true
     },
-    "banner_url": {
-      "type": "string"
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -21,9 +21,6 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "created_date": {
-      "type": "datetime"
-    },
     "likes": {
       "type": "relation",
       "relation": "oneToMany",
@@ -41,6 +38,21 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "tweet"
+    },
+    "total_likes": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "total_retweets": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "total_comments": {
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }

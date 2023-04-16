@@ -22,9 +22,6 @@
       "relation": "manyToOne",
       "target": "api::tweet.tweet",
       "inversedBy": "comments"
-    },
-    "created_date": {
-      "type": "datetime"
     }
   }
 }
